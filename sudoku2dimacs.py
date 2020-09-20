@@ -15,7 +15,7 @@ def sudoku2dimacs(sudoku):
             # for each value get the row/column position
             row = (i // int(rc)) + 1 # row nr remains same for each rc values
             column = (i % int(rc)) + 1 # col nr is 1 till rc for each rc values
-            rcv = f'{row}{column}{int(value)} 0'
+            rcv = f'{row}{column}{value} 0'
             sudoku_values.append(rcv)
     # list to string with \n between each clause        
     dimacs_sudoku = "\n".join(sudoku_values)
